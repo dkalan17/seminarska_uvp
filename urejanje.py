@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 VHODNA_MAPA = "cele_strani"
 IZHODNI_CSV = "prenosniki.csv"
 
-
+# funkcija, ki iz vsakega prenosnika naredi seznam slovarjev z lastnostmi le-tega
 def obdelaj_datoteko(pot):
     with open(pot, "r", encoding="utf-8") as f:
         soup = BeautifulSoup(f, "html.parser")
@@ -80,7 +80,7 @@ def obdelaj_datoteko(pot):
 
     return izdelki
 
-
+# v vsaki html datoteki poklice funkcijo obdelaj_datoteko in jih zdruzi ter zapise v .csv datoteko
 def main():
 
     vsi_izdelki = []
