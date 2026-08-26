@@ -10,3 +10,26 @@ Za seminarsko nalogo sem se odločil analizirati podatke o prenosnikih na strani
 - prenosniki.csv: tabela v kateri so podatki o razlicnih prenosnikih
 - analiza_prenosnikov.ipynb: jupyter zvezek kjer so podatki analizirani in predstavljeni na razlicne nacine
 - README.md: opis projekta in delovanja
+
+## Pogon kode
+1. Kloniranje repozitorija
+- Odpri command prompt/terminal.
+- S cd funkcijo navigiraj v mapo kamor želiš shraniti projekt.
+- Poženi ukaz "git clone https://github.com/dkalan17/seminarska_uvp/tree/main".
+
+1. Namestitev virtualnega okolja (virtual enviroment)
+- V VS Code-u odpri terminal v mapi s projektom.
+- Ustvari virtualno okolje na Windows z ukazom "python -m venv venv" ali na Mac/Linux z "python3 -m venv venv"
+- Aktiviraj virtualno okolje na Windows z ukazom "venv\Scripts\activate" ali na Mac/Linux z "source venv/bin/activate" (ko je aktivno, bo v terminalu vidno (venv) na začetku vrstice)
+
+1. Namestitev knjižnic
++ Potrebne knjižnice namestite z ukazom: "pip install pandas matplotlib beautifulsoup4 requests jupyter numpy".
+
+1. Zagon programa
++ Poženite datoteko main.py
+
+## Težave, ki sem jih imel
++ Podatki niso bili standardizirani, na primer nekje ni bil podan ssd ali pa grafična kartica, zato je bilo težko izluščiti prave dele html kode.
+
+## Zaključek
++ Z izdelavo tega projekta sem se naučil veliko novih stvari o anilizi podatkov in "web scrapanju". Znanje, ki sem ga pridobil se mi zdi koristno in ga bom še uporabil.
