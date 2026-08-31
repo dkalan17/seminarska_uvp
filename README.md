@@ -15,7 +15,7 @@ Za seminarsko nalogo sem se odločil analizirati podatke o prenosnikih na strani
 1. Kloniranje repozitorija
 - Odpri command prompt/terminal.
 - S cd funkcijo navigiraj v mapo kamor želiš shraniti projekt.
-- Poženi ukaz "git clone https://github.com/dkalan17/seminarska_uvp/tree/main".
+- Poženi ukaz "git clone https://github.com/dkalan17/seminarska_uvp.git".
 
 2. Namestitev virtualnega okolja (virtual enviroment)
 - V VS Code-u odpri terminal v mapi s projektom.
