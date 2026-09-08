@@ -16,14 +16,15 @@ headers = {
 
 # s pomocjo zanke for shranimo vsako stran v svojo html datoteko. le-te shranimo v mapo cele_strani
 #uporabimo try except in javimo če pri branju pride do napake
-for i in range(1, 13):
-    try:
-        response = requests.get(povezava_1_del + str(i) + povezava_2_del, headers=headers,timeout=10)
-        juha = bs4.BeautifulSoup(response.text, "html.parser")
-        if not os.path.exists("cele_strani"):
-            os.makedirs("cele_strani")
-        with open("cele_strani/stran" + str(i) + ".html", "w", encoding="utf-8") as f: #html stran shranimo v mapo cele_strani
-            f.write(str(juha))
-    except Exception as e:
-        print("Prislo je do napake pri branju strani " + str(i))
-        continue
+def prenesi_strani():
+    for i in range(1, 13):
+        try:
+            response = requests.get(povezava_1_del + str(i) + povezava_2_del, headers=headers,timeout=10)
+            juha = bs4.BeautifulSoup(response.text, "html.parser")
+            if not os.path.exists("cele_strani"):
+                os.makedirs("cele_strani")
+            with open("cele_strani/stran" + str(i) + ".html", "w", encoding="utf-8") as f: #html stran shranimo v mapo cele_strani
+                f.write(str(juha))
+        except Exception as e:
+            print("Prislo je do napake pri branju strani " + str(i))
+            continue

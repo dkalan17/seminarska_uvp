@@ -2,6 +2,7 @@ import os
 import re
 import csv
 from bs4 import BeautifulSoup
+from scraper import prenesi_strani
 
 VHODNA_MAPA = "cele_strani"
 IZHODNI_CSV = "prenosniki.csv"
@@ -82,6 +83,7 @@ def obdelaj_datoteko(pot):
 
 # v vsaki html datoteki poklice funkcijo obdelaj_datoteko in jih zdruzi ter zapise v .csv datoteko
 def main():
+    prenesi_strani()
 
     vsi_izdelki = []
 
